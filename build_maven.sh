@@ -1,6 +1,6 @@
 set -xe
 # maven wrapper을 이용하여 빌드합니다.
-RUN chmod 755 ./mvnw
+
 ./mvnw clean package
 
 # pom.xml에 정의된 <artifactId>를 읽습니다.
