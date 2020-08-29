@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11
+FROM adoptopenjdk/openjdk14
 LABEL maintainer="inspire12<ox4443@naver.com>"
 # Add a volume pointing to /tmp
 VOLUME /tmp
