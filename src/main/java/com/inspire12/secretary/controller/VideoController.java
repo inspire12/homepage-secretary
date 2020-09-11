@@ -25,10 +25,5 @@ public class VideoController {
                                                        @PathVariable("fileName") String fileName) {
         return Mono.just(videoStreamService.prepareContent(fileName, fileType, httpRangeList));
     }
-
-    @GetMapping("/test")
-    public String getTest() {
-        return "test";
-    }
 }
 
