@@ -19,6 +19,13 @@ public class VideoController {
         this.videoStreamService = videoStreamService;
     }
 
+    /**
+     * AWS  CloudFront도 나중에 공부
+     * @param httpRangeList
+     * @param fileType
+     * @param fileName
+     * @return
+     */
     @GetMapping("/stream/{fileType}/{fileName}")
     public Mono<ResponseEntity<byte[]>> getStreamVideo(@RequestHeader(value = "Range", required = false) String httpRangeList,
                                                        @PathVariable("fileType") String fileType,
