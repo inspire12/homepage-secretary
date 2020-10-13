@@ -1,10 +1,10 @@
 package com.inspire12.secretary.controller;
 
 import com.inspire12.secretary.model.FruitInfo;
+import com.inspire12.secretary.model.Person;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -18,8 +18,24 @@ import java.util.Observer;
 @SuppressWarnings("deprecation")
 @RestController
 @RequestMapping("/test")
-@EnableWebMvc
 public class TestController {
+
+    @GetMapping("/test")
+    public Person test2() {
+//        FruitInfo fruitInfo = new FruitInfo();
+
+        Person person = new Person();
+
+
+
+//        Apple value = ImmutableApple.builder()
+//                .foo(2)
+//                .bar("Bar")
+//                .addBuz(1, 3, 4)
+//                .addCrux(1,2,3)
+//                .build(); // FoobarValue{foo=2, bar=Bar, buz=[1, 3, 4], crux={}};
+        return person;
+    }
 
     public static class IntObservable extends Observable implements Runnable {
         @Override

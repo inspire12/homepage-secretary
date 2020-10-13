@@ -4,6 +4,7 @@ import lombok.ToString;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @ToString
 public class FruitInfo {
@@ -22,9 +23,9 @@ public class FruitInfo {
 
         FruitInfo fruitInfo = (FruitInfo) o;
 
-        if (distinctFruits != null ? !distinctFruits.equals(fruitInfo.distinctFruits) : fruitInfo.distinctFruits != null)
+        if (!Objects.equals(distinctFruits, fruitInfo.distinctFruits))
             return false;
-        return countFruits != null ? countFruits.equals(fruitInfo.countFruits) : fruitInfo.countFruits == null;
+        return Objects.equals(countFruits, fruitInfo.countFruits);
     }
 
     @Override
